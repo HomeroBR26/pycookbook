@@ -1,4 +1,4 @@
-from collections import OrderedDict
+from collections import OrderedDict, Counter
 
 duplist = "@#$@o#$#@$@#$#$@#k@#$@#$i@#$@#$@#$@#$@"
 
@@ -18,5 +18,10 @@ def ordered(duplist):
 
     return s
 
+
+def allinstances(duplist):
+    """Return a list with all items that occur more than once removed."""
+    return [el for el, count in Counter(duplist).items() if count == 1]
+
 if __name__ == '__main__':
-    print(unordered(duplist))
+    print(allinstances(duplist))

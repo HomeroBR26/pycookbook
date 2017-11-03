@@ -1,4 +1,6 @@
-"""Keep limited history of last items during iteration or processing."""
+"""Keep limited history of last items during iteration or processing.
+deque -- container with fast access to either end (
+"""
 from collections import deque
 
 
